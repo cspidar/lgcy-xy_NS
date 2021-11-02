@@ -1,21 +1,31 @@
-<page>
-    <actionBar title="Svelte Native App" />
-    <gridLayout>
-        <label class="info" horizontalAlignment="center" verticalAlignment="middle" textWrap="true">
-            <formattedString>
-                <span class="fas" text="&#xf135;" />
-                <span text=" {message}" />
-            </formattedString>
-        </label>
-    </gridLayout>
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<page actionBarHidden = "true" >
+    <actionBar title='aa'/>
+    <stackLayout class="statusBar">
+        <!-- <label height="24" /> -->
+        <label height="48" />
+    <stackLayout />
+    <stackLayout class="mainWin">
+        <webView src="https://youtube.com" />
+    </stackLayout>
 </page>
 
-<script lang="typescript">
-    let message: string = "Blank Svelte Native App"
+<script lang="javascript">
+    
+    let message = "Blank Svelte Native App \n ? \n ㅇㅇ"
 </script>
 
 <style>
+    .mainWin {
+        transform: scale(0.95) rotate(2deg);
+    }
+    .statusBar {
+        background-color: #3A53FF;
+    }
     .info .fas {
+        color: #3A53FF;
+    }
+    .info .fast {
         color: #3A53FF;
     }
     .info {
